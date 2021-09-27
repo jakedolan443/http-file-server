@@ -13,7 +13,7 @@ def catch_all(path):
         files = os.listdir(full_path)
         data = [path,[]]
         for f in files:
-            data[1].append({"path":"{}/{}".format(path, f), "end":f, "size":os.path.getsize("{}/{}".format(full_path, f))})
+            data[1].append({"end":f, "size":os.path.getsize("{}/{}".format(full_path, f))})
             if os.path.isdir("{}/{}".format(full_path, f)):
                 data[1][-1]['size'] = "-"
         return render_template('index.html', data=data)
