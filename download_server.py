@@ -9,7 +9,6 @@ run_path = os.getcwd()
 def catch_all(path):
     full_path = "{}/static/{}".format(run_path, path)
     if os.path.isdir(full_path):
-        print(path)
         files = os.listdir(full_path)
         data = [path,[]]
         for f in files:
