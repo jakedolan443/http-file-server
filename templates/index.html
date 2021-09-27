@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<body>
+    <h1>Index of /{{ data[0] }}</h1>
+    <hr>
+    <table style="padding-left: 16px">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Size</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td><a href="../">Parent Directory</td>
+          <td>-</td>
+      </tr>
+    {% for url in data[1] %}
+        <tr>
+            <td><a href="{{ url['path'] }}">{{ url['end'] }}</a></td>
+            <td>{{ url['size'] }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+</body>
